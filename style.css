@@ -4,9 +4,13 @@
 }
 
 body {
-    background-color: rgb(8, 6, 36);
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    background-color: black;
+}
+
+header,
+nav,
+main {
+    background-color: black;
 }
 
 nav {
@@ -14,8 +18,9 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 80px;
-    background-color: rgb(8, 25, 40);
+    background-color: #2d0236;
 }
+
 
 nav ul {
     display: flex;
@@ -46,30 +51,48 @@ nav ul li a:hover {
 
 /* Brand / logo text color */
 .brand {
-    color: #f3f5f5; 
+    color: #f0f5f5;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 255, 240, 0.6);
 }
+
 
 .firstSection {
     display: flex;
     justify-content: space-around;
-    margin: 10px 0;
-
-
-
+    align-items: center;;
+    background-color: #0d0d0d;
+    /* same dark as body */
+    color: white;
+    padding: 80px 0;
+    /* space above and below */
 }
+
 
 .leftSection {
     font-size: 2.5rem;
     margin: 70px 0 0 0;
 }
 
+.rightSection img {
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: none;
+}
+
+
 .purple {
     color: purple;
 }
 
 .text-gray {
-    color: #f4f4f4;
+    color: white;
     font-size: 1.2rem;
 }
 
@@ -98,7 +121,7 @@ nav ul li a:hover {
 }
 
 .secondSection .box {
-    background: white;
+    background: black;
     width: 90vw;
     height: 2px;
     margin: 50px 0 0 0;
@@ -109,7 +132,7 @@ nav ul li a:hover {
 }
 
 .secondSection .vertical {
-    background: white;
+    background: #0d0d0d;
     width: 1px;
     height: 110px;
     margin: 0 100px;
@@ -120,9 +143,12 @@ nav ul li a:hover {
 /* Work Experience Section */
 .workExperience {
     padding: 50px 20px;
-    background-color: #111;
+    background-color: #0d0d0d;
     color: #fff;
     text-align: center;
+    font-style: bold;
+    font-weight: 700;
+    font-size: larger;
 }
 
 .experience-box {
@@ -163,9 +189,9 @@ nav ul li a:hover {
 /* Projects Section */
 .projectsSection {
     padding: 50px 20px;
-    background-color: #f5f5f5;
+    background-color: black;
     text-align: center;
-    text-decoration-color: #091f84;
+    text-decoration-color: w;
 }
 
 .projectsSection h1 {
@@ -173,46 +199,221 @@ nav ul li a:hover {
 }
 
 .carousel-item img {
-    max-height: 500px;
+    max-height: 650px;
     object-fit: cover;
     overlay: auto;
-    
+    width: 100%;
+
+
 }
 
 .carousel-caption h5,
 .carousel-caption p {
-    color: #ddb917;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.7); 
+    color: lab(99.01% 0.36 -0.96);
+    font-style: "bold";
+    font-weight: 700;
 }
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Adjust the opacity as needed */
+    z-index: 1;
+}
+
+
+
+/* ABOUT SECTION STYLES */
+.about-section {
+    padding: 60px 20px;
+    background: #0f0f10;
+    /* dark */
+    color: #eee;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-left {
+    flex: 0 0 220px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-avatar {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 999px;
+    border: 4px solid rgba(255, 102, 196, 0.12);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.about-right {
+    flex: 1;
+    min-width: 280px;
+}
+
+.about-title {
+    font-size: 2rem;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+}
+
+.accent {
+    color: wheat;
+}
+
+.about-sub {
+    color: #cfcfcf;
+    margin: 0 0 12px 0;
+    font-size: 1.05rem;
+}
+
+.about-desc {
+    color: #bdbdbd;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-size: 1.0rem;
+
+}
+
+/* badges */
+.about-badges {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.about-badges li {
+    background: rgba(255, 102, 196, 0.08);
+    color: #ffb7dd;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 102, 196, 0.12);
+}
+
+/* buttons */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.btn.primary {
+    background: linear-gradient(90deg, rgb(8, 25, 40), #38346b);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(166, 77, 245, 0.15);
+}
+
+.btn.outline {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(117, 8, 8, 0.08);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    transition: all .2s ease;
+}
+
+/* socials */
+.about-socials {
+    margin-top: 14px;
+    display: flex;
+    gap: 14px;
+}
+
+.about-socials a {
+    color: #cfcfcf;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background .2s, color .2s;
+}
+
+.about-socials a:hover {
+    background: rgba(255, 102, 196, 0.08);
+    color: #ff66c4;
+}
+
+
 
 
 
 
 .footer {
-    background: rgb(8, 25, 40);
-    height: 200px;
+    background: #0d0d0d;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    margin-top: 550px;
+    gap: 15px;
 }
 
-.footer ul li {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 420px;
+.footer h3 {
+    font-size: 1.8rem;
+    color: white;
 }
 
-
-main hr {
-    border: 0cap;
-    height: 1px;
-    background: gray;
-    margin: 56x 84px;
+.footer p {
+    color: #bbb;
+    font-size: 0.9rem;
 }
 
-footer p {
-    color: rgb(255, 254, 254);
-    margin-top: 333px;
+.footer-socials a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-socials a:hover {
+    color: #ff66c4;
+    transform: scale(1.2);
+}
+
+.footer-links a {
+    color: #aaa;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff66c4;
+    border-bottom: 1px solid #ff66c4;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #777;
+    border-top: 1px solid #222;
+    padding-top: 10px;
 }
