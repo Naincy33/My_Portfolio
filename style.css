@@ -19,13 +19,44 @@ section {
 
 
 /* Navbar */
+
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: 80px;
+    background: linear-gradient(90deg, rgb(8, 25, 40), rgb(40, 0, 60));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 0 15px rgba(194, 153, 255, 0.2);
+}
+
+header,
+nav,
+main {
+    background-color: black;
+    margin: auto;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color: #2d0236;
+}
+
+/*nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #081928;
-    /* dark navy */
+    dark navy 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,10 +69,10 @@ nav {
 
 .brand {
     color: #c084fc;
-    /* purple accent */
+     purple accent 
     font-size: 1.3rem;
     font-weight: 600;
-}
+}*/
 
 .nav-links {
     list-style: none;
@@ -389,6 +420,7 @@ nav ul li a:hover {
 }
 
 .about-right {
+    margin-top: 35px;
     flex: 1;
     min-width: 280px;
 }
@@ -471,6 +503,7 @@ nav ul li a:hover {
 #academics {
     padding: 60px 10%;
     background-color: #050b1a;
+    margin-top: 35px;
     /* dark navy base */
     color: #e6f4ff;
     /* soft white-blue text */
@@ -480,7 +513,7 @@ nav ul li a:hover {
 
 #academics h1 {
     font-size: 2.2rem;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #4fd1c5;
