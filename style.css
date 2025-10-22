@@ -12,7 +12,101 @@ body {
     /* Prevent content from hiding behind navbar */
 }
 
-/* Navbar styling */
+section {
+    scroll-margin-top: 80px;
+    /* same height as your navbar */
+}
+
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #081928;
+    /* dark navy */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    z-index: 1000;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.brand {
+    color: #c084fc;
+    /* purple accent */
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 55px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.02rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links li a:hover {
+    color: #4fd1c5;
+    /* teal hover */
+    transform: scale(1.05);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: #081928;
+        width: 220px;
+        height: calc(100% - 60px);
+        padding-top: 30px;
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links li {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+}
+
+/* Navbar styling 
 nav {
     position: fixed;
     top: 0;
@@ -80,7 +174,7 @@ nav ul li a:hover {
 
 .left {
     font-size: 1.5rem;
-}
+}*/
 
 /* Brand / logo text color */
 .brand {
@@ -376,8 +470,10 @@ nav ul li a:hover {
 /* Academics Section */
 #academics {
     padding: 60px 10%;
-    background-color: #050b1a; /* dark navy base */
-    color: #e6f4ff; /* soft white-blue text */
+    background-color: #050b1a;
+    /* dark navy base */
+    color: #e6f4ff;
+    /* soft white-blue text */
     text-align: center;
     font-family: 'Poppins', sans-serif;
 }
@@ -387,7 +483,8 @@ nav ul li a:hover {
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #4fd1c5; /* teal accent */
+    color: #4fd1c5;
+    /* teal accent */
     position: relative;
 }
 

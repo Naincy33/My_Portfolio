@@ -23,7 +23,30 @@
 
 <body>
     <header>
+
+
+
         <nav>
+            <div class="brand"> NAINCY ’s Portfolio </div>
+
+            <!-- Hamburger Menu for Mobile -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#Home">Home </a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="#Skills">Skills </a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!--<nav>
             <div class="left brand" id="Home">
                 NAINCY ’s Portfolio
             </div>
@@ -39,10 +62,10 @@
 
                 </ul>
             </div>
-        </nav>
+        </nav>-->
     </header>
     <main>
-        <section class="firstSection">
+        <section class="firstSection" id="Home">
             <div class="leftSection">
                 Hi, My name is <span class="purple">Naincy--.</span>
 
@@ -170,6 +193,13 @@
         var typed = new Typed('#element', {
             strings: ['Frontend Developer', 'DSA Expertise', 'Web Designer', 'Problem Solver'],
             typeSpeed: 50,
+        });
+
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
         });
     </script>
 
