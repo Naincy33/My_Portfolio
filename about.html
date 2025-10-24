@@ -37,10 +37,10 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="academics.html">Academics</a></li>
-                
+
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        <!--</nav>
+            <!--</nav>
         <nav>
             <div class="left brand" id="Home">
                 NAINCY ’s Portfolio
@@ -92,7 +92,7 @@
                     </p>
 
                     <div class="about-cta">
-                        <a href="resume.pdf" class="btn primary" download>Download Resume</a>
+                        <a href="Resume.pdf" class="btn primary" download>Download Resume</a>
                         <a href="#contact" class="btn outline">Contact Me</a>
                     </div>
 
@@ -108,6 +108,13 @@
             var typed = new Typed('#element', {
                 strings: ['Frontend Developer', 'DSA Expertise', 'Web Designer', 'Problem Solver'],
                 typeSpeed: 50,
+            });
+
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
             });
         </script>
 
