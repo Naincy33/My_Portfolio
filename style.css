@@ -345,43 +345,122 @@ nav ul li a:hover {
     color: white;
 }
 
-/* Projects Section */
-.projectsSection {
-    padding: 50px 20px;
-    background-color: black;
+/* 🌌 Projects Section */
+.projects-section {
+    background: #0b0b14;
+    color: #fff;
+    padding: 80px 10%;
     text-align: center;
-    text-decoration-color: w;
 }
 
-.projectsSection h1 {
-    margin-bottom: 30px;
-}
-
-.carousel-item img {
-    max-height: 650px;
-    object-fit: cover;
-    overlay: auto;
-    width: 100%;
-
-
-}
-
-.carousel-caption h5,
-.carousel-caption p {
-    color: lab(99.01% 0.36 -0.96);
-    font-style: "bold";
+.projects-title {
+    font-size: 3rem;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
-.carousel-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+.projects-title .dot {
+    color: #6c63ff;
+}
+
+.projects-subtitle {
+    max-width: 750px;
+    margin: 0 auto 60px;
+    color: #c5c5c5;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    justify-items: center;
+}
+
+.project-card {
+    background: linear-gradient(180deg, #1a1a2e, #161623);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
     width: 100%;
-    height: 70%;
-    background: rgba(0, 0, 0, 0.5);
-    /* Adjust the opacity as needed */
-    z-index: 1;
+    max-width: 360px;
+    text-align: left;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.3);
+}
+
+.card-img {
+    position: relative;
+}
+
+.card-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.github-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #111;
+    border-radius: 50%;
+    padding: 8px;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.github-icon:hover {
+    background: #6c63ff;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #bdbdbd;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    background: linear-gradient(90deg, #6c63ff, #c56cf0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 60px 5%;
+    }
+
+    .projects-title {
+        font-size: 2.2rem;
+    }
 }
 
 
