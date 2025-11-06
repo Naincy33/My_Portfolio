@@ -77,7 +77,7 @@
             </div>
 
             <div class="rightSection">
-                <img src="mine.png" alt="developer image" width="400px" height="450px">
+                <img src="mine.png" alt="developer image" width="400px" height="950px">
 
             </div>
 
@@ -146,7 +146,7 @@
                 <!-- 🟣 Project 1: My Portfolio -->
                 <div class="project-card">
                     <div class="card-img">
-                        <img src="images/portfolio.png" alt="My Portfolio Screenshot">
+                        <img src="portfolio.png" alt="My Portfolio Screenshot">
                         <a href="https://github.com/naincy33/My_Portfolio" target="_blank" class="github-icon">
                             <i class="fa-brands fa-github"></i>
                         </a>
@@ -188,14 +188,14 @@
                 <div class="project-card">
                     <div class="card-img">
                         <img src="project3.jpeg" alt="Python Games Screenshot">
-                        <a href="https://github.com/naincy33/Python-Games" target="_blank" class="github-icon">
+                        <a href="https://github.com/Naincy33/coding_project" target="_blank" class="github-icon">
                             <i class="fa-brands fa-github"></i>
                         </a>
                     </div>
                     <div class="card-content">
                         <h3>Coding Projects</h3>
-                        <p>A collection of fun and logical mini-games built in Python — like Rock Paper Scissors, Guess
-                            the Number, and Tic Tac Toe.</p>
+                        <p>A collection of fun and logical mini-games built in Python — like Hangman game, JARVIS AI
+                            assistant, chatbot.</p>
                         <div class="tags">
                             <span>#python</span>
                             <span>#games</span>
@@ -247,9 +247,32 @@
 
 
             <div class="footer-bottom">
-                <p>© 2025 Naincy | Designed with 💜 using HTML, CSS & JS</p>
+                <p>© 2025 Naincy | Designed with 💜 </p>
             </div>
     </footer>
+
+    <script>
+        const container = document.querySelector('.image-container');
+        const image = container.querySelector('img');
+
+        container.addEventListener('mousemove', (e) => {
+            const rect = container.getBoundingClientRect();
+            const x = e.clientX - rect.left; // mouse X position
+            const y = e.clientY - rect.top;  // mouse Y position
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * 10; // tilt up/down
+            const rotateY = ((x - centerX) / centerX) * 10; // tilt left/right
+
+            image.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+        });
+
+        container.addEventListener('mouseleave', () => {
+            image.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+        });
+    </script>
+
 
 
 
